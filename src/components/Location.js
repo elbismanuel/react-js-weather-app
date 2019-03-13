@@ -1,13 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Location extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Ciudad de Panamá</h1>
-            </div>
-        );
-    }
+const Location = (props) => {
+    return (<div>{ props.city }</div>)
 }
 
 export default Location;
