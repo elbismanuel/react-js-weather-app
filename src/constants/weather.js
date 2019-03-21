@@ -9,3 +9,7 @@ export const RAIN = "rain";
 export const SNOW = "snow";
 
 export const WINDY = "windy";
+
+export function verificar(){
+    console.log("Verificar usuario");
+}
