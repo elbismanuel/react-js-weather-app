@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WeatherIcons from 'react-weathericons';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 //Importación de constantes
 import {
@@ -11,7 +12,7 @@ import {
     SNOW,
     WINDY,
     verificar,
-} from '../constants/weather'
+} from '../../../constants/weather'
 
 const icons = {
     [CLOUD]: "cloud",
@@ -33,7 +34,7 @@ const getWeatherIcon = weatherState => {
 }
 
 const WeatherTemperature = ({temperature, weatherState}) => (
-    <div>
+    <div className="weatherTemperature">
         {getWeatherIcon(weatherState)}
         <span>{`${temperature} C°`}</span>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import WeatherExtraInfo from './WeatherExtraInfo';
 import WeatherTemperature from './WeatherTemperature';
+import PropTypes from 'prop-types';
 
 //Importación de constantes
 import {
@@ -10,10 +11,12 @@ import {
     RAIN,
     SNOW,
     WINDY,
-} from '../constants/weather'
+} from '../../../constants/weather'
+
+import './styles.css';
 
 const WeatherData = () => (
-    <div>
+    <div className="weatherDataCont">
        <WeatherTemperature temperature={20} weatherState={WINDY} />
        <WeatherExtraInfo humidity={80} wind={"10 m/s"} />
     </div>
