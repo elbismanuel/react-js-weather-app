@@ -15,11 +15,13 @@ import {
 
 import './styles.css';
 
-const WeatherData = () => (
-    <div className="weatherDataCont">
-       <WeatherTemperature temperature={20} weatherState={WINDY} />
-       <WeatherExtraInfo humidity={80} wind={"10 m/s"} />
-    </div>
-);
+//{data} => destructuring -> UTILIZADO EN CASO DE SER OBJETOS GRANDES
+const WeatherData = ({data: {temperature, weatherState, humidity, wind} }) => {
+    
+    return(<div className="weatherDataCont">
+       <WeatherTemperature temperature={temperature} weatherState={weatherState} />
+       <WeatherExtraInfo humidity={humidity} wind={wind} />
+    </div>)
+};
 
 export default WeatherData;
